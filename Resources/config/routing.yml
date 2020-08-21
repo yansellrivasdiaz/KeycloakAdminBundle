@@ -1,0 +1,4 @@
+nti_notification:
+    resource: "@KeycloakAdminBundle/Controller/"
+    type:     annotation
+    prefix: /keycloak/admin/

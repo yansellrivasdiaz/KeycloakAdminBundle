@@ -1,0 +1,22 @@
+services:
+    # -- application services
+    nti.keycloak_admin.client_auth.service:
+        class: NTI\KeycloakAdminBundle\Service\Auth\ClientAuthService
+        arguments: ["@service_container"]
+        public: true
+
+    nti.keycloak_admin.client_role.service:
+      class: NTI\KeycloakAdminBundle\Service\ClientRoleService
+      arguments: ["@service_container","@nti.keycloak_admin.client_auth.service"]
+
+    nti.keycloak_admin.client.service:
+      class: NTI\KeycloakAdminBundle\Service\ClientService
+      arguments: ["@service_container","@nti.keycloak_admin.client_auth.service"]
+
+    nti.keycloak_admin.role.service:
+      class: NTI\KeycloakAdminBundle\Service\RoleService
+      arguments: ["@service_container","@nti.keycloak_admin.client_auth.service"]
+
+    nti.keycloak_admin.user.service:
+      class: NTI\KeycloakAdminBundle\Service\UserService
+      arguments: ["@service_container","@nti.keycloak_admin.client_auth.service"]

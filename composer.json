@@ -1,0 +1,27 @@
+{
+    "name": "nti/keycloak-admin-bundle",
+    "description": "Symfony 3.4 keycloak-admin bundle.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yansell Rivas Diaz",
+            "email": "yrivas@syneteksolutions.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "NTI\\KeycloakAdminBundle" : ""
+        }
+    },
+    "keywords" : [
+        "KeycloakAdminBundle", "NTI", "keycloak", "admin", "keycloak-admin", "symfony"
+    ],
+    "target-dir" : "NTI/KeycloakAdminBundle",
+    "require": {
+        "php": ">=5.6",
+        "jms/serializer-bundle": ">=2.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "symfony/framework-bundle": ">=3.0"
+    }
+}
